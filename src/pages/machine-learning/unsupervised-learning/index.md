@@ -7,4 +7,5 @@ title: Unsupervised Learning
 - https://medium.com/technology-nineleaps/unsupervised-learning-3dee8e6c8477
 - http://scikit-learn.org/stable/auto_examples/cluster/plot_segmentation_toy.html
 - https://www.youtube.com/watch?v=AnbiNaVp3eQ
+- http://sebastianraschka.com/Articles/2014_pca_step_by_step.html
 
