@@ -15,14 +15,28 @@ A SVM cost function seeks to approximate the logistic function with a piecewise 
 
 The Cost Function is used to train the SVM. By minimizing the value of J(theta), we can ensure that the SVM is as accurate as possible. In the equation, the functions cost1 and cost0 refer to the cost for an example where y=1 and the cost for an example where y=0. Cost, for SVMs, is determined by kernel (similarity) functions.
 
-### Kernels
+### Tuning parameters - Kernel, Regularization, Gamma and Margin
+
+1. Kernels
 
 Polynomial features are possibly computationally expensive and may slow down runtime with large datasets.
 Rather than adding more polynomial features, add "landmarks" against which you test the proximity of other datapoints.
 Each member of the training set is a landmark.
 A kernel is the "similarity function" that measures how close an input is to a certain marker.
 
-### Large Margin Classifier
+2. Regularization
+
+The regularization parameter (often termed as C parameter in python's sklearn library) tells the SVM optimizer how much the user wants to avoid misclassifying each training example.
+--> For large values of C, the optimizer will choose a smaller-margin hyperplane if that hyperplane does a better job of getting all the training points classified correctly.
+--> Conversely, a very small value of C will cause the optimizer to look for a larger-margin separating hyperplane, even if that hyperplane misclassifies more points.
+
+3. Gamma
+
+The gamma parameter defines how far the influence of a single training example reaches, with low values meaning ‘far’ and high values meaning ‘close’. 
+In case of "low gamma", points far away from plausible seperation line are considered in calculation for the seperation line and vice versa happens in case of "high gamma".
+
+
+4. Large Margin Classifier
 An SVM will find the line (or hyperplane in the more general case) that splits the data with the largest margin.
 While outliers may sway the line to one direction, a small enough C value will enforce regularization. 
 This new regularizing works the same with 1/\lambda, as seen in linear and logistic regression, but here we modify the cost component.
