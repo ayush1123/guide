@@ -17,6 +17,14 @@ In Logistic regression, hθ(x) is a sigmoid function, thus hθ(x) = g(θ'x).
 g(θ'x) = 1/ 1 + e^(-θ'x) 
 
 Note: θ' is θ transpose.
+
+#### Multinomial Logistic Regression
+Multinomial logistic regression is a simple extension of the binary logistic regression model, which is used when the exploratory variable has more than 2 nominal categories.
+Here, the exploratory variable is dummy coded into multiple 1/0 variables. There are variables for all categories except 1, so if there are 'M' categories there will be 'M-1' dummy variables. Each category’s dummy variable has a value of 1 for its category and a 0 for all others. One category, the reference category, doesn’t need its own dummy variable, as it is uniquely identified by all the other variables being 0.
+It then estimates a separate binary logistic regression model for each of those dummy variables. The result is M−1 binary logistic regression models. Each model conveys the effect of predictors on the probability of success in that category, in comparison to the reference category.
+
+#### Ordinal Logistic Regression
+It is used to predict the dependent variable with ‘ordered’ multiple categories and independent variables.
             
 ###### Cost function
 
@@ -33,3 +41,4 @@ For further reading to build logistic regression step by step :
 
 - Click <a href="https://medium.com/towards-data-science/building-a-logistic-regression-in-python-step-by-step-becd4d56c9c8"  target='_blank' rel='nofollow'>here</a> for an article about building a Logistic Regression in Python.
 - Click <a href="http://nbviewer.jupyter.org/gist/justmarkham/6d5c061ca5aee67c4316471f8c2ae976" target='_blank' rel='nofollow'>here</a> for another article on building a Logical Regression.
+- click <a href="https://www.datacamp.com/community/tutorials/understanding-logistic-regression-python" target='_blank' rel='nofollow'>here</a> Understanding Logistic Regression in Python
